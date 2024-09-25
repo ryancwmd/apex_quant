@@ -15,12 +15,12 @@ def supported_strategies(strategy, params):
 
 def read_clargs():
     parser = argparse.ArgumentParser(description='Parse Optional Arguments')
-    parser.add_argument('-t', '--ticker', type=str, help='Forex Pair Ticker to Retreive from yfinance', default='EURUSD=X')
-    parser.add_argument('-p', '--period', type=str, help='Period to retrieve data, eg 1y, 5d', default='1y')
-    parser.add_argument('-i', '--interval', type=str, help='Interval to retrieve data, eg 1d, 1m', default='1d')
-    parser.add_argument('-o', '--outdir', type=str, help='Directory to store the CSV forex pair data in', default='./../assets/forex_data/')
-    parser.add_argument('-r', '--rprofile', type=str, help='Filepath to the risk management profile', default='./../assets/risk_management_profile.json')
-    parser.add_argument('-s', '--strategy', type=str, help='Trading strategy to use', default='simple moving average')
+    parser.add_argument('-t', '--ticker', type=str, help='Forex Pair Ticker to Retreive from yfinance.', default='EURUSD=X')
+    parser.add_argument('-p', '--period', type=str, help='Period to retrieve data, eg 1y, 5d.', default='1y')
+    parser.add_argument('-i', '--interval', type=str, help='Interval to retrieve data, eg 1d, 1m.', default='1d')
+    parser.add_argument('-o', '--outdir', type=str, help='Directory to store the CSV forex pair data in.', default='./../assets/forex_data/')
+    parser.add_argument('-r', '--rprofile', type=str, help='Filepath to the risk management profile.', default='./../assets/risk_management_profile.json')
+    parser.add_argument('-s', '--strategy', type=str, help='Trading strategy to use. Accepted values include "simple moving average" and "macd".', default='simple moving average')
 
     args = parser.parse_args()
     return args

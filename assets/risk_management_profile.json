@@ -1,6 +1,5 @@
 {
     "initial_capital": 100000,
     "position_limit": 0.05,
-    "loss_cap": 0.1,
-    "log": ["trades", "risk actions"]
+    "loss_cap": 0.1
 }

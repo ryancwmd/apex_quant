@@ -37,8 +37,7 @@ def retrieve_data(base_fp, ticker, period, interval):
 
     # filter nan values
     df = df.dropna()
-    # df = df.drop(['Volume', 'Dividends', 'Stock Splits'], axis=1)
-
+    
     df.to_csv(fp)
 
     return fp
